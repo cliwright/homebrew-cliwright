@@ -5,20 +5,20 @@
 class Whoiam < Formula
   desc "Verify you're on the right AWS account before running any command"
   homepage "https://github.com/cliwright/whoiam"
-  version "0.6.0"
+  version "0.6.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cliwright/whoiam/releases/download/v0.6.0/whoiam_Darwin_x86_64.tar.gz"
-      sha256 "2ae5fa1a3760ee99ff310673b79fd88e4d2effc9864eb9c29f4783b15ce17ba1"
+      url "https://github.com/cliwright/whoiam/releases/download/v0.6.2/whoiam_Darwin_x86_64.tar.gz"
+      sha256 "e38d0bc64f23068c105ff94dfab15e25f3a27213f54b8219ff5d12234bf06a14"
 
       define_method(:install) do
         bin.install "whoiam"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cliwright/whoiam/releases/download/v0.6.0/whoiam_Darwin_arm64.tar.gz"
-      sha256 "419ced27470235cc6506937d045729ab3e26b474cb03bdd2ff2a0cf188d244cc"
+      url "https://github.com/cliwright/whoiam/releases/download/v0.6.2/whoiam_Darwin_arm64.tar.gz"
+      sha256 "a1a621e60c207fa4da7d1ec49ab759f585a6fc9177acd3a27aeea2de2dcec4d0"
 
       define_method(:install) do
         bin.install "whoiam"
@@ -28,15 +28,15 @@ class Whoiam < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/whoiam/releases/download/v0.6.0/whoiam_Linux_x86_64.tar.gz"
-      sha256 "07d7fad0016ef4f10dbb50f3f597090f32788046a6a7f19d3d9a52f229307ce8"
+      url "https://github.com/cliwright/whoiam/releases/download/v0.6.2/whoiam_Linux_x86_64.tar.gz"
+      sha256 "153466b695ba839e1f7e4b9c269df0e69c65c0a382ecfe482b01414bbcd7ce30"
       define_method(:install) do
         bin.install "whoiam"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/whoiam/releases/download/v0.6.0/whoiam_Linux_arm64.tar.gz"
-      sha256 "ec2bae8cef043fa83c5b7ce44937debd520ab5f60df459da497730f290240a0b"
+      url "https://github.com/cliwright/whoiam/releases/download/v0.6.2/whoiam_Linux_arm64.tar.gz"
+      sha256 "0f115f7332cae6ab971ac5a0562487feeb913b27dcb86c80c9f02bb7f5e48e35"
       define_method(:install) do
         bin.install "whoiam"
       end
