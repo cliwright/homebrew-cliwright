@@ -5,20 +5,20 @@
 class Squawk < Formula
   desc "Dead simple CLI tool to send slack messages from CI pipelines."
   homepage "https://github.com/cliwright/squawk"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cliwright/squawk/releases/download/v0.0.1/squawk_Darwin_x86_64.tar.gz"
-      sha256 "41353105b64bed1be888e081a7a891d42495129ed1070a26d86b4bcd806ba5b8"
+      url "https://github.com/cliwright/squawk/releases/download/v0.0.2/squawk_Darwin_x86_64.tar.gz"
+      sha256 "f6172b484dd9c3531dd2929be3cf7f626277ca80dac6aee2a30d23755bd8d94c"
 
       define_method(:install) do
         bin.install "squawk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cliwright/squawk/releases/download/v0.0.1/squawk_Darwin_arm64.tar.gz"
-      sha256 "04f2fbcb3bee4182904637ed764b89603ea059d89e2d62bccb022f9b6cfefc3e"
+      url "https://github.com/cliwright/squawk/releases/download/v0.0.2/squawk_Darwin_arm64.tar.gz"
+      sha256 "52985e7259801795401199b00917015b0a870cf1582f6ba2edc63e68cb797dab"
 
       define_method(:install) do
         bin.install "squawk"
@@ -28,15 +28,15 @@ class Squawk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/squawk/releases/download/v0.0.1/squawk_Linux_x86_64.tar.gz"
-      sha256 "41f9addfb1ce229e5ffe1b205a4521c40b70437a7222638da842e940da207dbd"
+      url "https://github.com/cliwright/squawk/releases/download/v0.0.2/squawk_Linux_x86_64.tar.gz"
+      sha256 "5f3bd7fe6e2e153c02be6b884fb8c77090f33dcbae4fe170f2da5946a7fefa6e"
       define_method(:install) do
         bin.install "squawk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/squawk/releases/download/v0.0.1/squawk_Linux_arm64.tar.gz"
-      sha256 "c0a7b3922944778bcd88c09cee03f9d639e65dd18e2339a7aa58e221844b52bb"
+      url "https://github.com/cliwright/squawk/releases/download/v0.0.2/squawk_Linux_arm64.tar.gz"
+      sha256 "de6fa338fce9aa227f834994e2dee661d9d2c5c7e5975911542dba235f5d7a35"
       define_method(:install) do
         bin.install "squawk"
       end
