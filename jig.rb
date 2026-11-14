@@ -5,20 +5,20 @@
 class Jig < Formula
   desc "Render project templates — no hooks, no code execution, templates are data"
   homepage "https://github.com/cliwright/jig"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cliwright/jig/releases/download/v0.1.0/jig_Darwin_x86_64.tar.gz"
-      sha256 "355f87e636f6d6e135e813729f07bfb24528afe49baea7861fc768e630e18a11"
+      url "https://github.com/cliwright/jig/releases/download/v0.1.1/jig_Darwin_x86_64.tar.gz"
+      sha256 "6101cfc65b5a508934cf1e479836f1d13c9972c7b6cb572844919dc6b16e4b16"
 
       define_method(:install) do
         bin.install "jig"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cliwright/jig/releases/download/v0.1.0/jig_Darwin_arm64.tar.gz"
-      sha256 "87232213217f1516c3b6ddc0dea87770dc4791b13224f110bc07198d1aea9f31"
+      url "https://github.com/cliwright/jig/releases/download/v0.1.1/jig_Darwin_arm64.tar.gz"
+      sha256 "97d467677d8794f40c61471ac28b3351be119d0015901348702c5574c6b0dc08"
 
       define_method(:install) do
         bin.install "jig"
@@ -28,15 +28,15 @@ class Jig < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/jig/releases/download/v0.1.0/jig_Linux_x86_64.tar.gz"
-      sha256 "143f51d6012c57495c266729ec05740072f63b1703a4d2bbf6d6c7b1e6141d71"
+      url "https://github.com/cliwright/jig/releases/download/v0.1.1/jig_Linux_x86_64.tar.gz"
+      sha256 "517c899847a9f6f84f2381be1646c44076ef02f81af3884c2860b1c2394d2dc9"
       define_method(:install) do
         bin.install "jig"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cliwright/jig/releases/download/v0.1.0/jig_Linux_arm64.tar.gz"
-      sha256 "edba6193087693c611c393441fd60adf21833781aef46956f09951582b9d9aee"
+      url "https://github.com/cliwright/jig/releases/download/v0.1.1/jig_Linux_arm64.tar.gz"
+      sha256 "19acfbaf318e0521561f7f0ced1648ddf43607dd1da9af94bf96fc0c85b0da6b"
       define_method(:install) do
         bin.install "jig"
       end
